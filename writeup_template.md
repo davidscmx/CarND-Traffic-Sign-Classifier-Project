@@ -74,10 +74,16 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x12 				|
 | Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x32      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x12 				|
+| Fully connected		|       Input = 800, Output = 120  									|
+| Dropout		|       probability = 0.50
+| Fully connected		|       Input = 120, Output = 84  									|
+| RELU					|												|
+| Fully connected		|       Input = 84, Output = 43  									|
+
+
+
  
 
 
