@@ -28,7 +28,7 @@ was no need to use sklearn to separate the dataset.
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
-[image9]: ./myimages/nopassing.jpg "No Passing - Traffic Sign 1"
+[image9]: ./my_images/nopassing.jpg "No Passing - Traffic Sign 1"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
