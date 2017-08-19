@@ -28,6 +28,7 @@ was no need to use sklearn to separate the dataset.
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image9]: ./myimages/nopassing.jpg "No Passing - Traffic Sign 1"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -137,7 +138,7 @@ to improve it even further that I was not able to do due to time constraints:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
+![alt text][image9] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
 The first image might be difficult to classify because ...
