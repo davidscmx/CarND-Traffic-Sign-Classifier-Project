@@ -125,6 +125,7 @@ How might a dropout layer help with creating a successful model?
 If a well known architecture was chosen:
 * What architecture was chosen?
 LeNet
+
 * Why did you believe it would be relevant to the traffic sign application?
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
@@ -142,11 +143,11 @@ to improve it even further that I was not able to do due to time constraints:
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 
-<img src="./my_images/nopassing.jpg" width="48">
+<img src="./my_images/nopassing.jpg" width="80">
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image9] ![alt text][image5] ![alt text][image6] 
+![No Passing][<img src="./my_images/nopassing.jpg" width="80">] ![Stop Sign][<img src="./my_images/stopsign.jpg" width="80">] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
 The first image might be difficult to classify because ...
