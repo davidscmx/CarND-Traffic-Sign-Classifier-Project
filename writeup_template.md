@@ -33,6 +33,7 @@ was no need to use sklearn to separate the dataset.
 
 
 ## Rubric Points
+
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 
@@ -139,6 +140,9 @@ to improve it even further that I was not able to do due to time constraints:
 ###Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+
+
+<img src="./my_images/nopassing.jpg" width="48">
 
 Here are five German traffic signs that I found on the web:
 
