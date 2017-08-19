@@ -142,10 +142,11 @@ to improve it even further that I was not able to do due to time constraints:
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-
-<img src="./my_images/nopassing.jpg" width="80">
-
 Here are five German traffic signs that I found on the web:
+
+<img src="./my_images/nopassing.jpg" width="80"> <img src="./my_images/generalcaution.jpg" width="80"> <img src="./my_images/stopsign.jpg" width="80"> 
+
+<img src="./my_images/pedestrian.jpg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
 
 ![No Passing][<img src="./my_images/nopassing.jpg" width="80">] ![Stop Sign][<img src="./my_images/stopsign.jpg" width="80">] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
