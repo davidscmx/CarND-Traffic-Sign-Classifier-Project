@@ -147,11 +147,11 @@ The images that may be difficult to classify are the one that have an angle and 
 the hardest to classify are the roundabout and the pedestrian sign.
 
 <img src="./my_images/nopassing.jpg" width="80"> <img src="./my_images/generalcaution.jpg" width="80"> <img src="./my_images/stopsign.jpg" width="80"> 
-pedestrain.jpeg
-<img src="./my_images/pedestrian.jpeg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
+
+<img src="./my_images/pedestrian.jpg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
@@ -168,7 +168,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 I am not sure if this compares favorable with the test accuracy since the data sample is too small. But I would say
 it is good since the Pedestrian crossing image looks difficult to classify (it is too far and on an angle) 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 For all the images except for the pedestrian image, the top softmax probability was is very close to 1.
 
