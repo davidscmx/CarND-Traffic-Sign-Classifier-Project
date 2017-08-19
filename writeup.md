@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-##Writeup Template
+## Writeup Template
 
 ---
 
@@ -8,60 +8,47 @@
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
-
-Loaded dataset. It already contained a separate validation set file, valid.p, so there
-was no need to use sklearn to separate the dataset. 
-																																																																																				
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-[image9]: ./my_images/nopassing.jpg "No Passing - Traffic Sign 1"
-
-
-
 ## Rubric Points
 
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
-
-<img src="./my_images/nopassing.jpgg" alt="Drawing" style="width: 200px;"/>
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+
+Loaded dataset. It already contained a separate validation set file, valid.p, so there
+was no need to use sklearn to separate the dataset to a test set as suggested by the video 
 
 Number of training examples = 34799
+
 Number of validation examples = 4410
+
 Number of testing examples = 12630
+
 Image data shape = (32, 32, 3)
+
 Number of classes = 43
 
 ####2. Include an exploratory visualization of the dataset.
 
-![alt text][image1]
+No visualisation included
 
 ###Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 The only pre-processing I did was the MaxMin scaling applied one of the earlier assignments. This made a big difference when
 analyzing the accuracy. I additionally tried to to convert to grayscale but I could not get the dimensions for the CovNet right,
@@ -89,27 +76,33 @@ My final model consisted of the following layers:
 | Fully connected		|       Input = 84, Output = 43  									|
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of: 99.4%
-* validation set accuracy of: 95.9% 
-* test set accuracy of: 94.1%
+* training set accuracy of: **99.4%**
+* validation set accuracy of: **95.9%** 
+* test set accuracy of: **94.1%**
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
-  The first tried architecture was LeNet 
+
+Covnets should be useful when recognizing examples where the closeness of features matters.
+Images are a perfect example of this. 
+
+The first tried architecture was:
+
+LeNet 
 
 * What were some problems with the initial architecture?
+
 I think the initial LeNet architecture (the one used for the MNIST charactes) was in a sense too 'broad'.
 That is to say it was designed to work well with simple features.   
 
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-
 
 
 * Which parameters were tuned? How were they adjusted and why?
@@ -123,35 +116,40 @@ For example, why might a convolution layer work well with this problem?
 How might a dropout layer help with creating a successful model?
 
 If a well known architecture was chosen:
+
 * What architecture was chosen?
+
 LeNet
 
 * Why did you believe it would be relevant to the traffic sign application?
 
+Covnets should be useful when recognizing examples where the closeness of features matters.
+Images are a perfect example of this. 
+
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+
 I think the model is working well judging by reported accuracies. However I have identified a couple of things I could have done
 to improve it even further that I was not able to do due to time constraints:
 
 - Modify dropout rate since we have overfitting
 - Augment the data by rotating it, etc.
-- reduce the size of the filters
+- reduce the size of the filters  
 - turn RGB to grayscale 
 
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
+The first image might be difficult to classify because ...
+
+
 <img src="./my_images/nopassing.jpg" width="80"> <img src="./my_images/generalcaution.jpg" width="80"> <img src="./my_images/stopsign.jpg" width="80"> 
 
-<img src="./my_images/pedestrian.jpg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
+<img src="./my_images/pedestrian.jpeg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
 
-![No Passing][<img src="./my_images/nopassing.jpg" width="80">] ![Stop Sign][<img src="./my_images/stopsign.jpg" width="80">] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
