@@ -143,11 +143,11 @@ to improve it even further that I was not able to do due to time constraints:
 
 Here are five German traffic signs that I found on the web:
 
-The first image might be difficult to classify because ...
-
+The images that may be difficult to classify are the one that have an angle and are far away. I would say
+the hardest to classify are the roundabout and the pedestrian sign.
 
 <img src="./my_images/nopassing.jpg" width="80"> <img src="./my_images/generalcaution.jpg" width="80"> <img src="./my_images/stopsign.jpg" width="80"> 
-
+pedestrain.jpeg
 <img src="./my_images/pedestrian.jpeg" width="80"> <img src="./my_images/roundabout.jpg" width="80">
 
 
@@ -173,12 +173,13 @@ it is good since the Pedestrian crossing image looks difficult to classify (it i
 For all the images except for the pedestrian image, the top softmax probability was is very close to 1.
 
 For the pedestrian image the probabilities are the following:
-| Probability         	|     Prediction	        					| 
+
+| Probability			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .80         			| Traffic Signls (26)   									| 
-| .11     				| Go straight or left (37) 										|
-| .08					| Keep right (38)											|
-| .008	      			| General caution (18) 					 				|
+| .80      		| Traffic Signals   									| 
+| .11     		| Go straingt or left 										|
+| .08			| Keep right
+| 0.008 		| General caution					 				|
 
 
 
